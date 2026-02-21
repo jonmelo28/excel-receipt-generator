@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 22px; }
+    .frame { border: 2px solid #000; padding: 16px 18px; }
+    .title { text-align:center; font-weight:700; font-size:14px; letter-spacing:.3px; }
+    .sub { text-align:center; font-size:11px; margin-top:2px; }
+    .toprow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+/* área central da logo */
+.logo-area {
+  width: 50%;
+  text-align: center;
+}
+
+/* logo maior */
+.logo {
+  height: 70px;   /* ← aumenta aqui se quiser */
+  object-fit: contain;
+}
+
+/* valor continua no canto direito */
+.value {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+}
+    .value { font-size:11px; text-align:right; min-width:140px; }
+    .text { margin-top:14px; font-size:11px; line-height:1.55; text-align:justify; }
+    .line { margin-top:14px; border-top: 2px solid #000000; }
+    .sign { margin-top:14px; font-size:10px; text-align:center; }
+    .sign b { font-size:11px; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="title">RECIBO DE COMISSÃO</div>
+    <div class="sub">{{CIDADE_UF}}, {{DATA_EXTENSO}}</div>
+
+    <div class="toprow">
+      <img class="logo-area" src="{{LOGO_URL}}" alt="Logo" />
+      <div class="value">
+        <div>R$ <b>{{VALOR_FORMATADO}}</b></div>
+      </div>
+    </div>
+
+    <div class="text">
+      Declaro para os devidos fins que recebi da empresa <b>{{EMPRESA}}</b> de cnpj nº <b>{{CNPJ}}</b> a importância de
+      <b>R$ {{VALOR_FORMATADO}}</b> (<b>{{VALOR_EXTENSO}}</b>), referente ao pagamento de Comissão
+      de vendas do período de <b>{{PERIODO}}</b>.
+      <br/><br/>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="sign">
+      <b>{{NOME}}</b><br/>
+      CPF: {{CPF}}
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @page { size: A4; margin: 10mm; }
+    body { font-family: Arial, sans-serif; margin: 0; }
+
+    /* Cada página A4 */
+    .page {
+      page-break-after: always;
+      height: 277mm; /* A4(297mm) - margens aproximadas */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8mm;
+    }
+
+    /* Cada recibo ocupa metade da página */
+    .receipt {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Seu layout do recibo (igual ao atual) */
+    .frame { border: 2px solid #000; padding: 16px 18px; }
+    .title { text-align:center; font-weight:700; font-size:14px; letter-spacing:1px; }
+    .sub { text-align:center; font-size:11px; margin-top:2px; }
+
+    .toprow {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 14px;
+    }
+    .logo-area { width: 100%; text-align: center; }
+    .logo { height: 70px; object-fit: contain; }
+
+    .value {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+    }
+    .value b { font-size: 13px; }
+
+    .text { margin-top:14px; font-size:11px; line-height:1.55; text-align:justify; }
+    .line { margin-top:14px; border-top: 3px solid #000; }
+    .sign { margin-top:14px; font-size:11px; text-align:center; }
+  </style>
+</head>
+<body>
+  {{PAGES}}
+</body>
+</html>

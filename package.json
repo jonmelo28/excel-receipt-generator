@@ -1,0 +1,19 @@
+{
+  "name": "recibo_node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jonatha de Souza Melo",
+  "license": "ISC",
+  "description": "Recibo com informações salvas em XLS / XLSX",
+  "dependencies": {
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.37.5",
+    "xlsx": "^0.18.5"
+  }
+}
