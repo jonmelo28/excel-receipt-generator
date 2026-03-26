@@ -2,7 +2,7 @@
 
 ## 📖 Sobre o projeto
 
-Este projeto tem como objetivo gerar **recibos automatizados em Excel**, utilizando Node.js para manipulação de dados e criação de arquivos de forma dinâmica.
+Este projeto tem como objetivo gerar **recibos automatizados em PDF**, utilizando Node.js para manipulação de dados e criação de arquivos de forma dinâmica.
 
 A aplicação simula um cenário real de empresa, onde há necessidade de geração rápida e padronizada de recibos para controle financeiro e operacional.
 
@@ -12,16 +12,18 @@ A aplicação simula um cenário real de empresa, onde há necessidade de geraç
 
 * Node.js
 * JavaScript
-* Biblioteca para manipulação de Excel (ex: ExcelJS ou similar)
+* Biblioteca para manipulação de Excel (ex: xlsx ou similar)
+* Biblioteca para manipulação de PDF (ex: pdf-lib ou similar)
 * File System (fs)
 
 ---
 
 ## ⚙️ Funcionalidades
 
-* 📄 Geração automática de recibos em Excel
+* 📄 Geração automática de recibos em PDF
 * 🧾 Preenchimento dinâmico de dados (nome, valor, data, etc.)
-* 📁 Exportação de arquivos `.xlsx`
+* 📁 Importação de arquivos `.xlsx`
+* 📁 Exportação de arquivos `.PDF`
 * 🔄 Possibilidade de integração com sistemas internos
 
 ---
@@ -44,13 +46,13 @@ Ferramentas como Excel são amplamente usadas em empresas para organização e a
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/jonmelo28/recibo_node_excel.git
+git clone https://github.com/jonmelo28/excel-receipt-generator.git
 ```
 
 ### 2. Acesse a pasta
 
 ```bash
-cd recibo_node_excel
+cd excel-receipt-generator
 ```
 
 ### 3. Instale as dependências
@@ -70,10 +72,20 @@ node index.js
 ## 📂 Estrutura do projeto
 
 ```
-📁 recibo_node_excel
+📁 recibo_node
+ ┣ 📁 output (arquivos gerados .pdf)
+ ┣ 📁 public
+    ┣ 📁 logos
+ ┣ 📁 templates
+    ┣ 📄impressao_2porpagina.html
+    ┣ 📄recibo_fragment.html
+    ┣ 📄recibo.html
+ ┣ 📁 utils
+    ┣ 📄limparOutput.js
+ ┣ 📄 extenso.js
  ┣ 📄 index.js
  ┣ 📄 package.json
- ┗ 📄 (arquivos gerados .xlsx)
+
 ```
 
 ---
@@ -101,9 +113,7 @@ Demonstrar habilidades em:
 
 ## 💡 Possíveis melhorias
 
-* Interface web para geração de recibos
 * Integração com banco de dados
-* Exportação em PDF
 * Sistema completo de gestão de recibos
 
 ---
